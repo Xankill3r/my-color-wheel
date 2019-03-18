@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## My Color Wheel
 
-You can use the [editor on GitHub](https://github.com/Xankill3r/my-color-wheel/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Run the tool [here](https://xankill3r.github.io/my-color-wheel/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Inspired by Color and Light by James Gurney
+- Uses the [Chrome.js](https://github.com/gka/chroma.js) library.
 
-### Markdown
+### Author
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+my-color-wheel is written by Ujwal Kumar.
 
-```markdown
-Syntax highlighted code block
+### License
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Xankill3r/my-color-wheel/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Released under MIT license.
