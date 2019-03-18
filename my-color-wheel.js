@@ -75,3 +75,10 @@ function init() {
 
     updateColorWheel();
 }
+
+function download() {
+    var download = document.getElementById("download");
+    var img = document.getElementById("colorWheelCtx").toDataURL("image/png")
+                .replace("image/png", "image/octet-stream");
+    download.setAttribute("href", img);
+}
