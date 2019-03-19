@@ -1,0 +1,59 @@
+body {
+	background-color: #7f7f7f;
+}
+#header {
+	width: 100%;
+	text-align: center;
+}
+#content {
+	position: relative;
+	width: 512px;
+	margin: 0 auto;
+}
+#c1, #c2, #c3, #c4, #c5, #c6, #grey {
+	position: absolute;
+	width: 64px;
+	height: 24px;
+}
+#c1 {
+	top: 0px;
+	left: 224px;
+}
+#c2 {
+	top: 415px;
+	left: 480px;
+}
+#c3 {
+	top: 415px;
+	left: -32px;
+}
+#c4 {
+	top: 135px;
+	left: 480px;
+}
+#c5 {
+	top: 135px;
+	left: -32px;
+}
+#c6 {
+	top: 548px;
+	left: 224px;
+}
+#grey {
+	top: 44px;
+	left: -32px;
+}
+#colorWheelCtx {
+	position: absolute;
+	top: 30px;
+}
+#download {
+	position: absolute;
+	top: 600px;
+	left: 256px;
+	margin-left: -60px;
+}
+#download-btn {
+	width: 120px;
+	height: 40px;
+}
