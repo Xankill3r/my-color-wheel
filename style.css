@@ -41,11 +41,25 @@ body {
 }
 #grey {
 	top: 0px;
-	left: 480px;
+	left: 390px;
 }
 #valueCount {
 	top: 30px;
-	left: 480px;
+	left: 450px;
+	position: absolute;
+	width: 64px;
+	height: 24px;
+}
+#colorMode {
+	top: 65px;
+	left: 545px;
+	position: absolute;
+	width: 64px;
+	height: 24px;
+}
+#valueMode {
+	top: 99px;
+	left: 585px;
 	position: absolute;
 	width: 64px;
 	height: 24px;

@@ -17,8 +17,22 @@
             <input id="c4" value="#e71837" type="color"/>
             <input id="c5" value="#77d827" type="color"/>
             <input id="c6" value="#3872b1" type="color"/>
-            <label style="position:absolute; width:60px; height:24px; left:420px; top:0px;">Neutral :</label><input id="grey" value="#484848" type="color"/>
-            <label style="position:absolute; width:60px; height:24px; left:420px; top:34px;">Values :</label><input id="valueCount" value="10" min="2" max="512" type="number"/>
+            <label style="position:absolute; width:60px; height:24px; left:330px; top:0px;">Neutral :</label><input id="grey" value="#484848" type="color"/>
+            <label style="position:absolute; width:60px; height:24px; left:390px; top:34px;">Values :</label><input id="valueCount" value="10" min="2" max="512" type="number"/>
+            <label style="position:absolute; width:120px; height:24px; left:450px; top:68px;">Color Mode :</label>
+            <select id="colorMode">
+                <option value="lch">LChuv</option>
+                <option value="lab">LAB</option>
+                <option value="rgb">RGB</option>
+                <option value="hsv">HSV</option>
+            </select>
+            <label style="position:absolute; width:120px; height:24px; left:490px; top:102px;">Value Mode :</label>
+            <select id="valueMode">
+                <option value="lab">LAB</option>
+                <option value="lch">LChuv</option>
+                <option value="rgb">RGB</option>
+                <option value="hsv">HSV</option>
+            </select>
             <a id="download" download="color-wheel.png"><button id="download-btn" type="button" onClick="download()">DOWNLOAD</button></a>
         </div>
     </body>

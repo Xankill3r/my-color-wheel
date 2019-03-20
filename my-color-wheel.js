@@ -1,6 +1,8 @@
 var color1, color2, color3, color4, color5, color6, grey;
 var colorWheelCtx;
 var valueCount;
+var colorMode;
+var valueMode;
 var diameter = 512;
 
 function updateColorWheel() {
@@ -14,6 +16,7 @@ function updateColorWheel() {
     var neutral = grey.value;
     var values = parseInt(valueCount.value);
     values = values || 5;
+    var mode = colorMode.value;
     // CMY
     drawColorString(colorWheelCtx, y, neutral, 0, values);
     drawColorString(colorWheelCtx, m, neutral, 120, values);
@@ -23,17 +26,17 @@ function updateColorWheel() {
     drawColorString(colorWheelCtx, b, neutral, 180, values);
     drawColorString(colorWheelCtx, g, neutral, 300, values);
     // Secondaries
-    var yr = chroma.mix(y, r, 0.5, "lch").hex();
+    var yr = chroma.mix(y, r, 0.5, mode).hex();
     drawColorString(colorWheelCtx, yr, neutral, 30, values);
-    var rm = chroma.mix(r, m, 0.5, "lch").hex();
+    var rm = chroma.mix(r, m, 0.5, mode).hex();
     drawColorString(colorWheelCtx, rm, neutral, 90, values);
-    var mb = chroma.mix(m, b, 0.5, "lch").hex();
+    var mb = chroma.mix(m, b, 0.5, mode).hex();
     drawColorString(colorWheelCtx, mb, neutral, 150, values);
-    var bc = chroma.mix(b, c, 0.5, "lch").hex();
+    var bc = chroma.mix(b, c, 0.5, mode).hex();
     drawColorString(colorWheelCtx, bc, neutral, 210, values);
-    var cg = chroma.mix(c, g, 0.5, "lch").hex();
+    var cg = chroma.mix(c, g, 0.5, mode).hex();
     drawColorString(colorWheelCtx, cg, neutral, 270, values);
-    var gy = chroma.mix(g, y, 0.5, "lch").hex();
+    var gy = chroma.mix(g, y, 0.5, mode).hex();
     drawColorString(colorWheelCtx, gy, neutral, 330, values);
 }
 
@@ -45,7 +48,7 @@ function drawColorString(ctx, color, grey, degrees, values) {
 
     var endAngle = 330 * (Math.PI / 180);
     for (var i = values; i >= 0; i--) {
-        var c = chroma.mix(grey, color, i / values, "lch");
+        var c = chroma.mix(grey, color, i / values, valueMode.value);
         ctx.fillStyle = c.hex();
         ctx.beginPath();
         ctx.moveTo(0, 0);
@@ -65,6 +68,8 @@ function init() {
     color6 = document.getElementById("c6");
     grey = document.getElementById("grey");
     valueCount = document.getElementById("valueCount");
+    colorMode = document.getElementById("colorMode");
+    valueMode = document.getElementById("valueMode");
 
     color1.addEventListener("change", function() { updateColorWheel(); }, false);
     color2.addEventListener("change", function() { updateColorWheel(); }, false);
@@ -72,6 +77,9 @@ function init() {
     color4.addEventListener("change", function() { updateColorWheel(); }, false);
     color5.addEventListener("change", function() { updateColorWheel(); }, false);
     color6.addEventListener("change", function() { updateColorWheel(); }, false);
+    grey.addEventListener("change", function() { updateColorWheel(); }, false);
+    colorMode.addEventListener("change", function() { updateColorWheel(); }, false);
+    valueMode.addEventListener("change", function() { updateColorWheel(); }, false);
     valueCount.addEventListener("change"
         , function() {
             var parsed = parseInt(valueCount.value);
@@ -81,7 +89,6 @@ function init() {
             updateColorWheel();
         }
         , false);
-    grey.addEventListener("change", function() { updateColorWheel(); }, false);
 
     colorWheelCtx = document.getElementById("colorWheelCtx").getContext("2d");
 
