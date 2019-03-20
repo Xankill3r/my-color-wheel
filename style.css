@@ -40,8 +40,15 @@ body {
 	left: 224px;
 }
 #grey {
-	top: 44px;
-	left: -32px;
+	top: 0px;
+	left: 480px;
+}
+#valueCount {
+	top: 30px;
+	left: 480px;
+	position: absolute;
+	width: 64px;
+	height: 24px;
 }
 #colorWheelCtx {
 	position: absolute;
